@@ -1,0 +1,10 @@
+{
+    "extends": "./tsconfig.app.json",
+    "compilerOptions": {
+      "incremental": true,
+      "tsBuildInfoFile": "./.tsbuildinfo",
+      "emitDeclarationOnly": true, // Emit only declaration files
+      "outDir": "./dist" // Specify the output directory
+    },
+    "include": ["src"]
+  }
