@@ -5,9 +5,14 @@ import SudokuGrid from './components/Grid'
 function App() {
 
   return (
-    <body>
-      <SudokuGrid/>
-    </body>
+    <>
+      <div>
+        <h1>Killer Sudoku</h1>
+      </div>
+      <div>
+        <SudokuGrid/>
+      </div>
+    </>
   )
 }
 
