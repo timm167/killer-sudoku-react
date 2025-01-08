@@ -1,0 +1,68 @@
+/* Container for the entire Sudoku grid */
+
+/* 9x9 grid creation */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(9, 40px);
+    grid-template-rows: repeat(9, 40px); 
+    width: fit-content;
+  }
+  
+  /* Individual cells */
+  .cell {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    text-align: center;
+    background-color: white;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    caret-color: transparent;
+    padding: 0px;
+    border: 1.5px solid #647463db;
+    width: 40px;
+    height: 40px;
+    position: relative;
+  }
+  
+  .cell input {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background: transparent;
+  }
+
+  /* Specialist cell css */
+  /* Some of this can and should be deleted but I am not sure what I need yet exactly */
+
+  .cell.focus {
+    outline: none;
+    border-color: rgb(70, 70, 209);
+  }
+  
+  .cell.selected {
+    background-color: #d0f0ff; 
+  }
+
+  .cell.selected:focus {
+    outline: none;
+    background-color: rgb(118, 169, 214);
+    border-color: rgb(70, 70, 209);
+  }
+  
+  .cell.incorrect {
+    background-color: #ffcccc; 
+  }
+
+  .cell.incorrect:focus {
+    outline: none;
+    background-color:#ffcccc; 
+    border-color: rgb(209, 70, 70);
+  }
