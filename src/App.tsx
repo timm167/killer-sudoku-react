@@ -1,7 +1,13 @@
+// Utility functions or constants
 import React, {useEffect, useState} from 'react'
 import { initializeGrid } from "./components/utils/Grid";
-import SudokuGrid from './components/Grid'
 import initialState from './app-utils/initialState'
+
+// Components
+import SudokuGrid from './components/Grid'
+import TopNav from './components/TopNav'
+
+// Styles
 import './App.css' 
 
 function App() {
@@ -15,10 +21,13 @@ function App() {
 
   return (
     <>
-      <div>
+      <div className='app-container'>
         <h1>Killer Sudoku</h1>
       </div>
       <div>
+        <TopNav grid={grid} state={state}/>
+      </div>
+      <div className='grid-container'>
         <SudokuGrid grid={grid} state={state}/>
       </div>
     </>
