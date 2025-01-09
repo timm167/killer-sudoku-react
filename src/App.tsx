@@ -6,6 +6,7 @@ import initialState from './app-utils/initialState'
 // Components
 import SudokuGrid from './components/Grid'
 import TopNav from './components/TopNav'
+import Killer from './components/Killer'
 
 // Styles
 import './App.css' 
@@ -29,6 +30,9 @@ function App() {
       </div>
       <div className='grid-container'>
         <SudokuGrid grid={grid} state={state}/>
+      </div>
+      <div>
+        <Killer grid={grid} state={state}/>
       </div>
     </>
   )
