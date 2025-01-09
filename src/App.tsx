@@ -17,15 +17,78 @@ function App() {
   const [state, setState] = useState(initialState) // Sets the state of the app to the initial state 
 
   // Grid update functions using the spread operator to update grid
-  // ADD FUNCTIONS HERE LATER
-  // NOT REALLY SURE WHAT THESE LOOK LIKE YET
+
   const gridSetters = {
-    setGridValue: (row: number, col: number, value: number) =>
+
+    setCellValue: (row: number, col: number, value: number) =>
       setGrid((prevState) => {
         const newGrid = [...prevState];
         newGrid[row][col].value = value;
         return newGrid;
       }),
+
+    setCellSelected: (row: number, col: number) =>
+      setGrid((prevState) => {
+        const newGrid = [...prevState];
+        newGrid[row][col].isSelected = !newGrid[row][col].isSelected;
+        return newGrid;
+      }),
+
+    setCellIsIncorrect: (row: number, col: number, value: boolean) =>
+      setGrid((prevState) => {
+        const newGrid = [...prevState];
+        newGrid[row][col].isIncorrect = value;
+        return newGrid;
+      }),
+
+    setCellBox: (row: number, col: number, value: string) =>
+      setGrid((prevState) => {
+        const newGrid = [...prevState];
+        newGrid[row][col].box = value;
+        return newGrid;
+      }),
+    
+    setBoxSum: (box: string) => 
+      setGrid((prevState) => {
+        const newGrid = [...prevState];
+        for (let i = 0; i < 9; i++) {
+          for (let j = 0; j < 9; j++) {
+            if (newGrid[i][j].box === box) {
+              newGrid[i][j].boxSum = newGrid[i][j].value;
+            }
+          }
+        }
+        return newGrid;
+      }),
+
+    setBoxDeclaredSum: (box: string, sum: number) =>
+      setGrid((prevState) => {
+        const newGrid = [...prevState];
+        for (let i = 0; i < 9; i++) {
+          for (let j = 0; j < 9; j++) {
+            if (newGrid[i][j].box === box) {
+              newGrid[i][j].boxDeclaredSum = sum;
+            }
+          }
+        }
+        return newGrid;
+      }),
+    
+    setBoxColor: (box: string) =>
+      setGrid((prevState) => {
+        const newGrid = [...prevState];
+        const color = state.currentColorsArray[state.currentColorsArray.length - 1];
+        for (let i = 0; i < 9; i++) {
+          for (let j = 0; j < 9; j++) {
+            if (newGrid[i][j].box === box) {
+              newGrid[i][j].boxColor = color;
+            }
+          }
+        }
+        stateSetters.setCurrentColorsArray();
+        return newGrid;
+      })
+
   }
 
   // State update functions using spread operator to update state

@@ -11,10 +11,10 @@ interface Cell {
     column: any;
     cube: number;
     canFocus: boolean;
-    value: number | string;
+    value: number;
     isSelected: boolean;
     isIncorrect: boolean;
-    inBox: undefined;
+    box: string | undefined;
     boxSum: number;
     boxDeclaredSum: number;
     boxColor: string;
@@ -22,7 +22,7 @@ interface Cell {
   }
   
 // Helper function to initialize a cell
-// This won't be used after creation. Data will be updated as part of the state object passed through grid component.
+// This won't be used after creation. Data will be updated as part of state.
 function initializeCell(row: number, column: number): Cell {
     return {
         id: `${row}-${column}`, // Unique identifier
@@ -30,10 +30,10 @@ function initializeCell(row: number, column: number): Cell {
         column: column, // Column index
         cube: getCubeIndex(row, column), // Cube index
         canFocus: true, // For graphics purposes
-        value: '', // Value of the cell
+        value: 0, // Value of the cell (will have to make 0 invisible)
         isSelected: false, // Helps keyboard navigation, input, and graphics
         isIncorrect: false, // Sets value to wrong when a constraint is violated
-        inBox: undefined, // Will be useful for box constraints built later
+        box: undefined, // Will be useful for box constraints built later
         boxSum: 0, // Will be useful for box constraints built later
         boxDeclaredSum: 0, // Will be useful for box constraints built later
         boxColor: '', // Will be useful for box constraints built later
