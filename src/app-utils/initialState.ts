@@ -4,6 +4,7 @@ const initialState = {
     settingBoxTotal: false,
     togglingSums: false,
     selectedCell: null,
+    killerMode: false,
 }
 
 export default initialState
