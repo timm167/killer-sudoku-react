@@ -19,9 +19,13 @@ function App() {
   // Grid update functions using the spread operator to update grid
   // ADD FUNCTIONS HERE LATER
   // NOT REALLY SURE WHAT THESE LOOK LIKE YET
-  // ideally allow for calling with grid[row][col] and grid[row][col].value (don't think that is complex)
   const gridSetters = {
-
+    setGridValue: (row: number, col: number, value: number) =>
+      setGrid((prevState) => {
+        const newGrid = [...prevState];
+        newGrid[row][col].value = value;
+        return newGrid;
+      }),
   }
 
   // State update functions using spread operator to update state

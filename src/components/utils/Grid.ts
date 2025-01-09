@@ -11,7 +11,7 @@ interface Cell {
     column: any;
     cube: number;
     canFocus: boolean;
-    value: string;
+    value: number | string;
     isSelected: boolean;
     isIncorrect: boolean;
     inBox: undefined;
