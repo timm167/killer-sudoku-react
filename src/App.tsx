@@ -16,9 +16,10 @@ function App() {
   const [grid, setGrid] = useState(initializeGrid()); // Sets the grid initially ready for logic to handle its data
   const [state, setState] = useState(initialState) // Sets the state of the app to the initial state 
 
-  // State update functions using the spread operator to update grid
+  // Grid update functions using the spread operator to update grid
   // ADD FUNCTIONS HERE LATER
   // NOT REALLY SURE WHAT THESE LOOK LIKE YET
+  // ideally allow for calling with grid[row][col] and grid[row][col].value (don't think that is complex)
   const gridSetters = {
 
   }

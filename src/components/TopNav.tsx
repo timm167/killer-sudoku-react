@@ -16,7 +16,7 @@ export default function TopNav({ grid, state, stateSetters, gridSetters }) {
     }
 
     const handleKillerClick = () => {
-        console.log("Killer Mode");
+        stateSetters.setKillerMode(!state.killerMode);
     }
 
     return (
