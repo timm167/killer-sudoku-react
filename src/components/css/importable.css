@@ -159,16 +159,6 @@ input[type="number"]::-webkit-inner-spin-button {
     width: 100%;
 }
 
-
-
-/* Specific Button Designs */
-/* Specific Button Designs */
-
-#colorView:hover {
-    box-shadow: 0 0 10px rgba(27, 75, 40, 0.657);
-    transform: scale(1.01)
-}
-
 /* For highlighting active cells */
 .active {
     background-color: rgb(195, 243, 228);
@@ -198,33 +188,6 @@ input[type="number"]::-webkit-inner-spin-button {
 
 #solveButton:hover {
     background-color: #9ebad1;
-}
-
-#delBoxButton {
-    background-color: #d1c4e9;
-    color: #333333;
-}
-
-#delBoxButton:hover {
-    background-color: #b39ddb;
-}
-
-#setBoxButton {
-    background-color: #c5cae9;
-    color: #333333;
-}
-
-#setBoxButton:hover {
-    background-color: #9fa8da;
-}
-
-#newBoxButton {
-    background-color: #ffccbc;
-    color: #333333;
-}
-
-#newBoxButton:hover {
-    background-color: #ffab91;
 }
 
 

@@ -1,0 +1,59 @@
+/* For all buttons */
+span {
+    font-size: 10px;
+}
+
+.killer-nav {
+    width: 160px;
+    height: 45px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin: 10px;
+    margin-top: 30px;
+}
+
+.killer-nav:hover {
+    border: 1px solid #000000;
+}
+
+.killer-nav:focus {
+    outline: none;
+}
+/* Specific buttons + Hover */
+.deleteBoxButton {
+    background-color: #d1c4e9;
+    color: #333333;
+}
+
+.deleteBoxButton:hover {
+    background-color: #b39ddb;
+}
+
+.setBoxTotalButton {
+    background-color: #c5cae9;
+    color: #333333;
+}
+
+.setBoxTotalButton:hover {
+    background-color: #9fa8da;
+}
+
+.createBoxButton {
+    background-color: #ffccbc;
+    color: #333333;
+}
+
+.createBoxButton:hover {
+    background-color: #ffab91;
+}
+
+.toggleColorButton {
+    background-color: rgb(162, 253, 177, 0.6);
+}
+
+.toggleColorButton:hover {
+    box-shadow: 0 0 10px rgba(27, 75, 40, 0.657);
+    transform: scale(1.01)
+}

@@ -16,7 +16,10 @@ span {
 
 .navigation:hover {
     border: 1px solid #000000;
-    
+}
+
+.navigation:focus {
+    outline: none;
 }
 
 /* Specific buttons + Hover */

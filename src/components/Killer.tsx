@@ -21,16 +21,16 @@ export default function Killer({grid, state}) {
 
     return (
         <div className="top-nav">
-            <button className="navigation deleteBoxButton" onClick={() => handleDeleteBoxClick()}>
+            <button className="killer-nav deleteBoxButton" onClick={() => handleDeleteBoxClick()}>
                 Delete Box
             </button>
-            <button className="navigation setBoxTotalButton" onClick={() => handleSetBoxClick()}>
+            <button className="killer-nav setBoxTotalButton" onClick={() => handleSetBoxClick()}>
                 Set Box Total
             </button>
-            <button className="navigation saveButton" onClick={() => handleCreateBoxClick()}>
+            <button className="killer-nav createBoxButton" onClick={() => handleCreateBoxClick()}>
                 Create Box <span>(Enter)</span>
             </button>
-            <button className="navigation killerButton" onClick={() => handleToggleColorClick()}>
+            <button className="killer-nav toggleColorButton" onClick={() => handleToggleColorClick()}>
                 Toggle Color
             </button>
         </div>
