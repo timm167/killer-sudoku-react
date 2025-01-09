@@ -20,7 +20,7 @@ export default function Killer({grid, state}) {
     }
 
     return (
-        <div className="top-nav">
+        <div className="killer-buttons-holder">
             <button className="killer-nav deleteBoxButton" onClick={() => handleDeleteBoxClick()}>
                 Delete Box
             </button>

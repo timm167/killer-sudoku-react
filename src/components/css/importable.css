@@ -6,11 +6,6 @@ span {
     box-shadow: 0 0 20px rgba(232, 255, 183, 0.792);
 }
 
-.check-solve .button {
-    width: 200px;
-    padding: 15px 25px;
-}
-
 
 .empty-space-container {
     height: 65px;

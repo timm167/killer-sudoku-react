@@ -7,6 +7,7 @@ import initialState from './app-utils/initialState'
 import SudokuGrid from './components/Grid'
 import TopNav from './components/TopNav'
 import Killer from './components/Killer'
+import Solve from './components/Solve'
 
 // Styles
 import './App.css' 
@@ -31,8 +32,11 @@ function App() {
       <div className='grid-container'>
         <SudokuGrid grid={grid} state={state}/>
       </div>
-      <div>
+      <div className='killer-container'>
         <Killer grid={grid} state={state}/>
+      </div>
+      <div className='solve-container'>
+        <Solve grid={grid} state={state}/>
       </div>
     </>
   )

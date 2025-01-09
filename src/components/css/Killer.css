@@ -1,3 +1,19 @@
+/* Container */
+
+.killer-buttons-holder {
+    display: flex;
+    height: 75px;
+    width: 740px;
+    background-color: #659a81;
+    border-radius: 10px;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 10px;
+}
+
 /* For all buttons */
 span {
     font-size: 10px;
@@ -11,7 +27,6 @@ span {
     border-radius: 10px;
     border: 1px solid black;
     margin: 10px;
-    margin-top: 30px;
 }
 
 .killer-nav:hover {
@@ -56,4 +71,13 @@ span {
 .toggleColorButton:hover {
     box-shadow: 0 0 10px rgba(27, 75, 40, 0.657);
     transform: scale(1.01)
+}
+
+/* Media */
+
+@media (max-width: 750px) {
+    .killer-nav {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 }

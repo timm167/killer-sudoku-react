@@ -3,6 +3,12 @@ span {
     font-size: 10px;
 }
 
+.top-nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
 .navigation{
     width: 160px;
     height: 45px;
