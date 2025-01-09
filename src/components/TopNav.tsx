@@ -1,14 +1,16 @@
-import React from "react";
+import React, {useState} from "react";
 import "./css/TopNav.css";
 
 export default function TopNav({ grid, state, stateSetters, gridSetters }) {
+    const [isChecked, setIsChecked] = useState(false);
 
     const handleUndoClick = () => {
-        console.log("Undo");
+        setIsChecked(false);
     }
 
     const handleResetClick = () => {
-        console.log("Reset");
+        isChecked ? window.location.reload() : setIsChecked(true)
+        setTimeout(() => {setIsChecked(false)}, 3000);
     }
 
     const handleSaveClick = () => {
@@ -24,8 +26,8 @@ export default function TopNav({ grid, state, stateSetters, gridSetters }) {
             <button className="top-nav-button undo-button" onClick={() => handleUndoClick()}>
                 Undo <span>(Bsp)</span>
             </button>
-            <button className="top-nav-button reset-button" onClick={() => handleResetClick()}>
-                Reset
+            <button className={`top-nav-button reset-button`} onClick={() => handleResetClick()}>
+                {isChecked ? 'Are you sure?': 'Reset'}
             </button>
             <button className="top-nav-button save-button" onClick={() => handleSaveClick()}>
                 Save
