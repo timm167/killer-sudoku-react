@@ -68,6 +68,16 @@ span {
     background-color: rgb(198, 133, 133);
 }
 
+.exit-killer-mode {
+    background-color: rgb(212, 207, 149);
+    color: rgb(70, 67, 21);
+    border: 1px solid rgb(70, 69, 21);
+}
+
+.exit-killer-mode:hover {
+    background-color: rgb(174, 176, 141);
+}
+
 @media (max-width: 750px) {
     .top-nav-buttons {
         display: grid;

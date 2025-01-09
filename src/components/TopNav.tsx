@@ -30,8 +30,11 @@ export default function TopNav({ grid, state, stateSetters, gridSetters }) {
             <button className="top-nav-button save-button" onClick={() => handleSaveClick()}>
                 Save
             </button>
-            <button className="top-nav-button toggle-killer-button" onClick={() => handleKillerClick()}>
-                Killer Mode <span>(Shft)</span>
+            <button 
+                className={`top-nav-button toggle-killer-button ${state.killerMode ? 'exit-killer-mode' : ''}`} 
+                onClick={() => handleKillerClick()}
+            >
+                {state.killerMode ? 'Back' : 'Killer Mode'} <span>(Shft)</span>
             </button>
         </div>
     )
