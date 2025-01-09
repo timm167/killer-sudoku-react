@@ -1,0 +1,70 @@
+/* Container */
+.solve-buttons-holder {
+    display: flex;
+    height: 75px;
+    border-radius: 10px;
+    justify-content: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+/* For all buttons */
+span {
+    font-size: 10px;
+}
+
+.solve-nav {
+    width: 230px;
+    height: 55px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin: 20px;
+    box-shadow: #546255 0px 0px 10px;
+    font-size: 20px;
+    color: black;
+}
+
+.solve-nav:hover {
+    border: 1px solid #000000;
+}
+
+.solve-nav:focus {
+    outline: none;
+}
+/* Specific buttons + Hover */
+.import-button {
+    background-color: #b2dfdb;
+    color: #333333;
+}
+
+.import-button:hover {
+    background-color: #80cbc4;
+}
+
+
+.solve-button {
+    background-color: #b3cde0;
+    color: #333333;
+}
+
+.solve-button:hover {
+    background-color: #9ebad1;
+}
+
+@media (max-width: 600px ){
+    .solve-nav {
+        width: 160px;
+        height: 45px;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 10px;
+        border: 1px solid black;
+        margin: 10px;
+        margin-bottom: 30px;
+    }
+    
+}
