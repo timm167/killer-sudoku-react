@@ -21,7 +21,7 @@ export default function Killer({grid, state, stateSetters, gridSetters}) {
 
     return (
         <div className='killer-buttons'>
-            <div className={`${state.killerMode ? '' : 'hidden'} `}>
+            <div className={`inner-killer-buttons ${state.killerMode ? '' : 'hidden'} `}>
                 <button className="killer-button delete-box-button" onClick={handleDeleteBoxClick}>
                     Delete Box
                 </button>

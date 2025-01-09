@@ -6,6 +6,8 @@
     grid-template-columns: repeat(9, 40px);
     grid-template-rows: repeat(9, 40px); 
     width: fit-content;
+    border: 1px solid #2a352c;
+    box-shadow: #000000 0px 0px 10px;
   }
   
   /* Individual cells */
@@ -38,6 +40,29 @@
     font-weight: bold;
     background: transparent;
   }
+
+/* Add thicker borders to delineate the 3x3 cubes */
+.cell:nth-child(3n) {
+    border-bottom: 3px solid #000;
+  }
+  
+  .cell:nth-child(1) {
+    border-top: 3px solid #000;
+  }
+  
+  .row:nth-child(3n+1) .cell {
+    border-left: 3px solid #000;
+  }
+  
+  .row:nth-child(9) .cell {
+    border-right: 3px solid #000;
+  }
+  
+
+
+
+
+
 
   /* Specialist cell css */
   /* Some of this can and should be deleted but I am not sure what I need yet exactly */
