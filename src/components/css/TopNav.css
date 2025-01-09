@@ -1,8 +1,67 @@
+/* For all buttons */
 span {
     font-size: 10px;
 }
 
 .navigation{
-    width: 150px;
+    width: 160px;
     height: 45px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin: 10px;
+    margin-bottom: 30px;
+}
+
+.navigation:hover {
+    border: 1px solid #000000;
+    
+}
+
+/* Specific buttons + Hover */
+.undoButton {
+    background-color: #e9e5d3;
+    color: #333333;
+}
+
+.undoButton:hover {
+    background-color: #f1be8b;
+}
+
+.saveButton {
+    background-color: #bde2dd;
+    color: #333333;
+}
+
+.saveButton:hover {
+    background-color:#8ec9ca;
+}
+
+.resetButton {
+    background-color: #f8c7c1;
+    color: #333333;
+}
+
+.resetButton:hover {
+    background-color: #f28c87;
+}
+
+.killerButton {
+    background-color: rgb(212, 149, 149);
+    color: rgb(70, 21, 21);
+    border: 1px solid rgb(70, 21, 21);
+    box-shadow: 0 0 10px rgba(27, 75, 40, 0.657);
+    transform: scale(1.01)
+}
+
+.killerButton:hover {
+    background-color: rgb(198, 133, 133);
+}
+
+@media (max-width: 750px) {
+    .top-nav {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 }

@@ -21,16 +21,16 @@ export default function TopNav({ grid, state }) {
 
     return (
         <div className="top-nav">
-            <button className="navigation" onClick={() => handleUndoClick()}>
+            <button className="navigation undoButton" onClick={() => handleUndoClick()}>
                 Undo <span>(Bsp)</span>
             </button>
-            <button className="navigation" onClick={() => handleResetClick()}>
+            <button className="navigation resetButton" onClick={() => handleResetClick()}>
                 Reset
             </button>
-            <button className="navigation" onClick={() => handleSaveClick()}>
+            <button className="navigation saveButton" onClick={() => handleSaveClick()}>
                 Save
             </button>
-            <button className="navigation" onClick={() => handleKillerClick()}>
+            <button className="navigation killerButton" onClick={() => handleKillerClick()}>
                 Killer Mode <span>(Shft)</span>
             </button>
         </div>
