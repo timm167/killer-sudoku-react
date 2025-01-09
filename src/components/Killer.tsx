@@ -1,22 +1,24 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './css/Killer.css';
 
 export default function Killer({grid, state, stateSetters, gridSetters}) {
 
     const handleDeleteBoxClick = () => {
-        console.log("Delete Box");
+        stateSetters.setDeletingBox(!state.deletingBox);
     }
 
     const handleSetBoxClick = () => {
-        console.log("Set Box Total");
+        stateSetters.setSettingBoxTotal(!state.settingBoxTotal);
     }
 
     const handleCreateBoxClick = () => {
-        console.log("Create Box");
+        stateSetters.setCreatingBox(!state.creatingBox);
     }
 
     const handleToggleColorClick = () => {
-        console.log("Toggle Color");
+        console.log(state.currentColorsArray);
+        console.log(state.currentColorsArray[state.currentColorsArray.length - 1]);   
+        stateSetters.setCurrentColorsArray()
     }
 
     return (
@@ -31,7 +33,10 @@ export default function Killer({grid, state, stateSetters, gridSetters}) {
                 <button className="killer-button create-box-button" onClick={handleCreateBoxClick}>
                     Create Box <span>(Enter)</span>
                 </button>
-                <button className="killer-button toggle-color-button" onClick={handleToggleColorClick}>
+                <button 
+                    className={`killer-button toggle-color-button ${state.currentColorsArray[state.currentColorsArray.length - 1]}`} 
+                    onClick={handleToggleColorClick}
+                >
                     Toggle Color
                 </button>
             </div>

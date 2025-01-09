@@ -32,12 +32,20 @@ function App() {
       setState((prevState) => ({ ...prevState, deletingBox: value })),
     setSettingBoxTotal: (value: boolean) =>
       setState((prevState) => ({ ...prevState, settingBoxTotal: value })),
-    setTogglingSums: (value: boolean) =>
-      setState((prevState) => ({ ...prevState, togglingSums: value })),
+    setCreatingBox: (value: boolean) =>
+      setState((prevState) => ({ ...prevState, creatingBox: value })),
     setKillerMode: (value: boolean) =>
       setState((prevState) => ({ ...prevState, killerMode: value })),
     setSelectedCell: (value: any) =>
       setState((prevState) => ({ ...prevState, selectedCell: value })),
+    // Removes the last color from the currentColorsArray as the current color will always be indexed at last the top of the stack
+    // If the array is empty, it will push the initial colors array to the currentColorsArray
+    setCurrentColorsArray: () => 
+      setState((prevState) => {
+        const newArray = [...prevState.currentColorsArray];
+        newArray.length === 0 ? newArray.push(...initialState.currentColorsArray): newArray.pop();
+        return { ...prevState, currentColorsArray: newArray };
+      }),
   };
 
   // For debugging will delete later

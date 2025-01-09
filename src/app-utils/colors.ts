@@ -1,4 +1,4 @@
-export const transparentColors = [
+const transparentColors = [
     "ice-blue",
     "quartz",
     "opal",
@@ -75,4 +75,5 @@ export const transparentColors = [
     "seashell",
     "aqua"
   ];
-  
+
+export default transparentColors;
