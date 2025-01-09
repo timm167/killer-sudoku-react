@@ -48,12 +48,6 @@ function App() {
       }),
   };
 
-  // For debugging will delete later
-  useEffect(() => {
-    console.log(state);
-    console.log(grid);
-  }, [state, grid])
-
   return (
     <>
       <div className='container'>

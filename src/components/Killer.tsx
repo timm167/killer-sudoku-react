@@ -3,6 +3,9 @@ import './css/Killer.css';
 
 export default function Killer({grid, state, stateSetters, gridSetters}) {
 
+    // Four functions below just handle the various buttons in the killer mode
+    // Currently they just update state but they will need to do more later
+
     const handleDeleteBoxClick = () => {
         stateSetters.setDeletingBox(!state.deletingBox);
     }
@@ -16,18 +19,22 @@ export default function Killer({grid, state, stateSetters, gridSetters}) {
     }
 
     const handleToggleColorClick = () => {
-        console.log(state.currentColorsArray);
-        console.log(state.currentColorsArray[state.currentColorsArray.length - 1]);   
         stateSetters.setCurrentColorsArray()
     }
 
     return (
         <div className='killer-buttons'>
             <div className={`inner-killer-buttons ${state.killerMode ? '' : 'hidden'} `}>
-                <button className="killer-button delete-box-button" onClick={handleDeleteBoxClick}>
-                    Delete Box
+                <button 
+                    className="killer-button delete-box-button" 
+                    onClick={handleDeleteBoxClick}
+                >
+                    {`${state.deletingBox ? 'Select a Box' : 'Delete Box'}`}
                 </button>
-                <button className="killer-button set-box-total-button" onClick={handleSetBoxClick}>
+                <button 
+                    className="killer-button set-box-total-button" 
+                    onClick={handleSetBoxClick}
+                >
                     Set Box Total
                 </button>
                 <button className="killer-button create-box-button" onClick={handleCreateBoxClick}>

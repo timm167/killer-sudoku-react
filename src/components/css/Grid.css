@@ -7,7 +7,12 @@
     grid-template-rows: repeat(9, 40px); 
     width: fit-content;
     border: 1px solid #2a352c;
-    box-shadow: #000000 0px 0px 10px;
+    box-shadow: #0000007c 0px 0px 10px;
+  }
+
+.highlight-grid {
+    border: 1px solid #2a352c;
+    box-shadow: #c7b834d6 0px 0px 10px;
   }
   
   /* Individual cells */

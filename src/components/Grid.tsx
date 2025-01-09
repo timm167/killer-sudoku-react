@@ -13,7 +13,7 @@ export default function SudokuGrid({grid, state, stateSetters, gridSetters}) {
     }
     return (
         // maps through the grid, then each row, to define a div for each cell (I need this for adding extra non-input elements later)
-        <div className="grid">
+        <div className={`grid ${state.deletingBox ? 'highlight-grid' : ''}`}>
             {grid.map((row, rowIndex) => (
                 <div key={rowIndex} className="row">
                     {row.map((cell, cellIndex) => (
