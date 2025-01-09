@@ -9,16 +9,19 @@ export default function TopNav({ grid, state, stateSetters, gridSetters }) {
     }
 
     const handleResetClick = () => {
-        isChecked ? window.location.reload() : setIsChecked(true)
-        setTimeout(() => {setIsChecked(false)}, 3000);
+        isChecked ? window.location.reload() : setIsChecked(true) // Requires a double click to reset
+        setTimeout(() => {setIsChecked(false)}, 4000); // Resets the button after 4 seconds to avoid accidental resets
     }
 
     const handleSaveClick = () => {
-        console.log("Save");
+        console.log("Save"); 
+        // fill in later
     }
 
     const handleKillerClick = () => {
         stateSetters.setKillerMode(!state.killerMode);
+        // This is all this button needs to do I think
+        // Other logic will rely on the killer mode state
     }
 
     return (
@@ -27,7 +30,7 @@ export default function TopNav({ grid, state, stateSetters, gridSetters }) {
                 Undo <span>(Bsp)</span>
             </button>
             <button className={`top-nav-button reset-button`} onClick={() => handleResetClick()}>
-                {isChecked ? 'Are you sure?': 'Reset'}
+                {isChecked ? 'Reset!': 'Reset'}
             </button>
             <button className="top-nav-button save-button" onClick={() => handleSaveClick()}>
                 Save

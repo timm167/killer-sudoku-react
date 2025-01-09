@@ -35,10 +35,10 @@ export default function Killer({grid, state, stateSetters, gridSetters}) {
                     className="killer-button set-box-total-button" 
                     onClick={handleSetBoxClick}
                 >
-                    Set Box Total
+                    {`${state.settingBoxTotal ? 'Set Box Sum' : 'Select a Box'}`}
                 </button>
                 <button className="killer-button create-box-button" onClick={handleCreateBoxClick}>
-                    Create Box <span>(Enter)</span>
+                    {`${state.creatingBox ? 'Place Box' : 'New Box'}`} <span>(Enter)</span>
                 </button>
                 <button 
                     className={`killer-button toggle-color-button ${state.currentColorsArray[state.currentColorsArray.length - 1]}`} 
