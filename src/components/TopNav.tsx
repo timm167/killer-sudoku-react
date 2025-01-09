@@ -1,7 +1,7 @@
 import React from "react";
 import "./css/TopNav.css";
 
-export default function TopNav({ grid, state }) {
+export default function TopNav({ grid, state, stateSetters, gridSetters }) {
 
     const handleUndoClick = () => {
         console.log("Undo");

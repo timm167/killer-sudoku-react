@@ -1,7 +1,7 @@
 import React from 'react';
 import './css/Killer.css';
 
-export default function Killer({grid, state}) {
+export default function Killer({grid, state, stateSetters, gridSetters}) {
 
     const handleDeleteBoxClick = () => {
         console.log("Delete Box");

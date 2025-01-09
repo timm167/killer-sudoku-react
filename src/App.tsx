@@ -19,52 +19,24 @@ function App() {
   // State update functions using the spread operator to update grid
   // ADD FUNCTIONS HERE LATER
   // NOT REALLY SURE WHAT THESE LOOK LIKE YET
+  const gridSetters = {
+
+  }
 
   // State update functions using spread operator to update state
-
-  // Function to set the isValid state
-  const setIsValid = (value: boolean) => {
-    setState(prevState => ({
-      ...prevState,
-      isValid: value,
-    }));
-  };
-
-  // Function to set the deletingBox state
-  const setDeletingBox = (value: boolean) => {
-    setState(prevState => ({
-      ...prevState,
-      deletingBox: value,
-    }));
-  };
-
-  // Function to set the settingBoxTotal
-  const setSettingBoxTotal = (value: boolean) => {
-    setState(prevState => ({
-      ...prevState,
-      settingBoxTotal: value,
-    }));
-  };
-
-  // Function to set the togglingSums state
-  const setTogglingSums = (value: boolean) => {
-    setState(prevState => ({
-      ...prevState,
-      togglingSums: value,
-    }));
-  };
-
-  // Function to set the killerMode state
-  const setKillerMode = (value: boolean) => {
-    setState(prevState => ({
-      ...prevState,
-      killerMode: value,
-    }));
-  };
-
-    // Not 100% sure what to do with this yet
-  const handleSelectedCell = (value: any) => {
-    // fill in later
+  const stateSetters = {
+    setIsValid: (value: boolean) =>
+      setState((prevState) => ({ ...prevState, isValid: value })),
+    setDeletingBox: (value: boolean) =>
+      setState((prevState) => ({ ...prevState, deletingBox: value })),
+    setSettingBoxTotal: (value: boolean) =>
+      setState((prevState) => ({ ...prevState, settingBoxTotal: value })),
+    setTogglingSums: (value: boolean) =>
+      setState((prevState) => ({ ...prevState, togglingSums: value })),
+    setKillerMode: (value: boolean) =>
+      setState((prevState) => ({ ...prevState, killerMode: value })),
+    setSelectedCell: (value: any) =>
+      setState((prevState) => ({ ...prevState, selectedCell: value })),
   };
 
   // For debugging will delete later
@@ -80,19 +52,39 @@ function App() {
       </div>
       <div>
         {/* TopNav component renders 4 buttons: Undo, Reset, Save, Toggle Killer Mode */}
-        <TopNav grid={grid} state={state}/>
+        <TopNav 
+          grid={grid} 
+          state={state}
+          stateSetters={stateSetters}
+          gridSetters={gridSetters}
+        />
       </div>
       <div className='container'>
         {/* SudokuGrid container renders the grid itself */}
-        <SudokuGrid grid={grid} state={state}/>
+        <SudokuGrid 
+          grid={grid} 
+          state={state}
+          stateSetters={stateSetters}
+          gridSetters={gridSetters}
+        />
       </div>
       <div className='container'>
         {/* Killer component renders 4 buttons: Delete Box, Set Box Total, Create Box, and Toggle Color */}
-        <Killer grid={grid} state={state}/>
+        <Killer 
+          grid={grid} 
+          state={state}
+          stateSetters={stateSetters}
+          gridSetters={gridSetters}
+        />
       </div>
       <div className='container'>
         {/* Solve renders 2 buttons: Import, and solve */}
-        <Solve grid={grid} state={state}/>
+        <Solve 
+          grid={grid} 
+          state={state}
+          stateSetters={stateSetters}
+          gridSetters={gridSetters}
+        />
       </div>
     </>
   )

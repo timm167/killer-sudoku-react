@@ -1,7 +1,7 @@
 import React from "react";
 import "./css/Solve.css";
 
-export default function Solve({ grid, state }) {
+export default function Solve({ grid, state, stateSetters, gridSetters }) {
 
     const handleImportClick = () => {
         console.log("Import");

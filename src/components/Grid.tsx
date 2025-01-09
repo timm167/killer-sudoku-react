@@ -1,7 +1,7 @@
 import React from "react";
 import './css/Grid.css';
   
-export default function SudokuGrid({grid, state}) {
+export default function SudokuGrid({grid, state, stateSetters, gridSetters}) {
 
     const handleCellChange = (e, cell) => {
         cell.value = e.target.value;
