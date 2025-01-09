@@ -54,3 +54,17 @@ span {
 .solve-button:hover {
     background-color: #9ebad1;
 }
+
+@media (max-width: 600px ){
+    .solve-nav {
+        width: 160px;
+        height: 45px;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 10px;
+        border: 1px solid black;
+        margin: 10px;
+        margin-bottom: 30px;
+    }
+    
+}

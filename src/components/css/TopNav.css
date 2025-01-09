@@ -3,13 +3,13 @@ span {
     font-size: 10px;
 }
 
-.top-nav {
+.top-nav-buttons {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
 }
 
-.navigation{
+.top-nav-button{
     width: 160px;
     height: 45px;
     padding: 10px 20px;
@@ -20,43 +20,43 @@ span {
     margin-bottom: 30px;
 }
 
-.navigation:hover {
+.top-nav-button:hover {
     border: 1px solid #000000;
 }
 
-.navigation:focus {
+.top-nav-button:focus {
     outline: none;
 }
 
 /* Specific buttons + Hover */
-.undoButton {
+.undo-button {
     background-color: #e9e5d3;
     color: #333333;
 }
 
-.undoButton:hover {
+.undo-button:hover {
     background-color: #f1be8b;
 }
 
-.saveButton {
+.save-button {
     background-color: #bde2dd;
     color: #333333;
 }
 
-.saveButton:hover {
+.save-button:hover {
     background-color:#8ec9ca;
 }
 
-.resetButton {
+.reset-button {
     background-color: #f8c7c1;
     color: #333333;
 }
 
-.resetButton:hover {
+.reset-button:hover {
     background-color: #f28c87;
 }
 
-.killerButton {
+.toggle-killer-button {
     background-color: rgb(212, 149, 149);
     color: rgb(70, 21, 21);
     border: 1px solid rgb(70, 21, 21);
@@ -64,13 +64,19 @@ span {
     transform: scale(1.01)
 }
 
-.killerButton:hover {
+.toggle-killer-button:hover {
     background-color: rgb(198, 133, 133);
 }
 
 @media (max-width: 750px) {
-    .top-nav {
+    .top-nav-buttons {
         display: grid;
         grid-template-columns: 1fr 1fr;
+    }
+    .undo-button {
+        justify-self: right;
+    }
+    .save-button {
+        justify-self: right;
     }
 }

@@ -1,25 +1,18 @@
 /* Container */
-
-.killer-buttons-holder {
+.killer-buttons {
     display: flex;
     height: 75px;
     width: 740px;
     background-color: #659a81;
     border-radius: 10px;
     align-items: center;
-    align-content: center;
     justify-content: center;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 0 10px;
     margin-top: 10px;
 }
 
-/* For all buttons */
-span {
-    font-size: 10px;
-}
-
-.killer-nav {
+/* General button styles */
+.killer-button {
     width: 160px;
     height: 45px;
     padding: 10px 20px;
@@ -29,55 +22,74 @@ span {
     margin: 10px;
 }
 
-.killer-nav:hover {
-    border: 1px solid #000000;
+.killer-button:hover {
+    border-color: #000;
 }
 
-.killer-nav:focus {
+.killer-button:focus {
     outline: none;
 }
-/* Specific buttons + Hover */
-.deleteBoxButton {
+
+/* Specific button styles */
+.delete-box-button {
     background-color: #d1c4e9;
-    color: #333333;
+    color: #333;
 }
 
-.deleteBoxButton:hover {
+.delete-box-button:hover {
     background-color: #b39ddb;
 }
 
-.setBoxTotalButton {
+.set-box-total-button {
     background-color: #c5cae9;
-    color: #333333;
+    color: #333;
 }
 
-.setBoxTotalButton:hover {
+.set-box-total-button:hover {
     background-color: #9fa8da;
 }
 
-.createBoxButton {
+.create-box-button {
     background-color: #ffccbc;
-    color: #333333;
+    color: #333;
 }
 
-.createBoxButton:hover {
+.create-box-button:hover {
     background-color: #ffab91;
 }
 
-.toggleColorButton {
-    background-color: rgb(162, 253, 177, 0.6);
+.toggle-color-button {
+    background-color: rgba(162, 253, 177, 0.6);
 }
 
-.toggleColorButton:hover {
+.toggle-color-button:hover {
     box-shadow: 0 0 10px rgba(27, 75, 40, 0.657);
-    transform: scale(1.01)
+    transform: scale(1.01);
 }
 
 /* Media */
-
-@media (max-width: 750px) {
-    .killer-nav {
+@media (max-width: 790px) {
+    .killer-buttons {
         display: grid;
         grid-template-columns: 1fr 1fr;
+    }
+
+    .killer-button {
+        width: 170px;
+        margin-right: 20px;
+        margin-left: 20px   ;
+    }
+
+    .delete-box-button{
+        justify-self: right;
+    }
+
+    .create-box-button {
+        justify-self: right;
+    }
+
+    .killer-buttons {
+        width: 440px;
+        height: 140px;
     }
 }

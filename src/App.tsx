@@ -13,9 +13,10 @@ import Solve from './components/Solve'
 import './App.css' 
 
 function App() {
-  const [grid, setGrid] = useState(initializeGrid()); 
-  const [state, setState] = useState(initialState)  
+  const [grid, setGrid] = useState(initializeGrid()); // Sets the grid initially ready for logic to handle its data
+  const [state, setState] = useState(initialState) // Sets the state of the app to the initial state 
 
+  // For debugging will delete later
   useEffect(() => {
     console.log(state);
     console.log(grid);
@@ -23,23 +24,28 @@ function App() {
 
   return (
     <>
-      <div className='app-container'>
+      <div className='container'>
         <h1>Killer Sudoku</h1>
       </div>
       <div>
+        {/* TopNav component renders 4 buttons: Undo, Reset, Save, Toggle Killer Mode */}
         <TopNav grid={grid} state={state}/>
       </div>
-      <div className='grid-container'>
+      <div className='container'>
+        {/* SudokuGrid container renders the grid itself */}
         <SudokuGrid grid={grid} state={state}/>
       </div>
-      <div className='killer-container'>
+      <div className='container'>
+        {/* Killer component renders 4 buttons: Delete Box, Set Box Total, Create Box, and Toggle Color */}
         <Killer grid={grid} state={state}/>
       </div>
-      <div className='solve-container'>
+      <div className='container'>
+        {/* Solve renders 2 buttons: Import, and solve */}
         <Solve grid={grid} state={state}/>
       </div>
     </>
   )
 }
 
+// Exports to be rendered in main.tsx
 export default App
