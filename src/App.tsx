@@ -12,6 +12,9 @@ import Solve from './components/Solve'
 // Styles
 import './App.css' 
 
+// NEXT STEPS:
+// Make the grid interactive using my new grid setters
+
 function App() {
   const [grid, setGrid] = useState(initializeGrid()); // Sets the grid initially ready for logic to handle its data
   const [state, setState] = useState(initialState) // Sets the state of the app to the initial state 
